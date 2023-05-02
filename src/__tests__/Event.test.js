@@ -1,7 +1,7 @@
-import React from "react";
-import { shallow } from "enzyme";
-import { mockData } from "../mock-data";
-import Event from "../Event";
+import React from 'react';
+import { shallow } from 'enzyme';
+import { mockData } from '../mock-data';
+import Event from '../Event';
 
 describe('<Event /> component', () => {
   let EventWrapper;
@@ -50,5 +50,20 @@ describe('<Event /> component', () => {
     expect(EventWrapper.state('collapsed')).toBe(false);
   })
 
+  test('render details when expanded', () => {
+    expect(EventWrapper.state('collapsed')).toBe(false);
+    const about = EventWrapper.find('.about');
+    const link = EventWrapper.find('.link');
+    const description = EventWrapper.find('.description');
+    const detailsButton = EventWrapper.find('.details');
+
+    expect(about).toHaveLength(1);
+    expect(about.text()).toBe('About event:');
+    expect(link).toHaveLength(1);
+    expect(link.text()).toBe('See details on Google Calendar');
+    expect(description).toHaveLength(1);
+    expect(description.text()).toBe(event.description);
+    expect(detailsButton.text()).toBe('Hide details');
+  })
  
 })

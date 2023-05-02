@@ -12,14 +12,26 @@ class Event extends Component {
     const { event } = this.props;
     const { collapsed } = this.state;
 
-    return <div className='event'>
-      <h2 className='title'>{event.summary}</h2>
-      <p className='time'>{`${event.start.dateTime} (${event.start.timeZone})`}</p>
-      <p className='location'>{`@${event.summary} | ${event.location}`}</p>
-      <button 
-        className='details'
-        onClick={() => this.toggleDetails()}>{collapsed ? 'Show' : 'Hide'} details</button>
-    </div>;
+    return (
+      <div className='event'>
+        <h2 className='title'>{event.summary}</h2>
+        <p className='time'>{`${event.start.dateTime} (${event.start.timeZone})`}</p>
+        <p className='location'>{`@${event.summary} | ${event.location}`}</p>
+
+        {!collapsed && (
+          <div className='event-details'>
+            <h3 className='about'>About event:</h3>
+            <a className='link'>See details on Google Calendar</a>
+            <p className='description'>{event.description}</p>
+          </div>
+        )}
+
+        <button 
+          className='details'
+          onClick={() => this.toggleDetails()}
+        >{collapsed ? 'Show' : 'Hide'} details</button>
+      </div>
+    )
   }
 }
 
