@@ -35,4 +35,13 @@ describe('<Event /> component', () => {
     expect(location).toHaveLength(1);
     expect(location.text()).toBe(`@${event.summary} | ${event.location}`);
   })
+
+  test('render button to show details when collapsed', () => {
+    expect(EventWrapper.state('collapsed')).toBe(true);
+    const detailsButton = EventWrapper.find('.details');
+    expect(detailsButton).toHaveLength(1);
+    expect(detailsButton.text()).toBe('Show details');
+  })
+
+ 
 })

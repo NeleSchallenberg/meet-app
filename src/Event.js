@@ -9,6 +9,7 @@ class Event extends Component {
       <h2 className='title'>{event.summary}</h2>
       <p className='time'>{`${event.start.dateTime} (${event.start.timeZone})`}</p>
       <p className='location'>{`@${event.summary} | ${event.location}`}</p>
+      <button className='details'>Show details</button>
     </div>;
   }
 }
