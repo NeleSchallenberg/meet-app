@@ -5,9 +5,10 @@ class Event extends Component {
 
   render() {
     const { event } = this.props;
-    return <div className="event">
+    return <div className='event'>
       <h2 className='title'>{event.summary}</h2>
       <p className='time'>{`${event.start.dateTime} (${event.start.timeZone})`}</p>
+      <p className='location'>{`@${event.summary} | ${event.location}`}</p>
     </div>;
   }
 }

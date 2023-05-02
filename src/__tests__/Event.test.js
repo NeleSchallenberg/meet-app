@@ -25,8 +25,14 @@ describe('<Event /> component', () => {
   })
 
   test('render event start time when collapsed', () => {
-    const time = EventWrapper.find('p.time');
+    const time = EventWrapper.find('.time');
     expect(time).toHaveLength(1);
     expect(time.text()).toBe(`${event.start.dateTime} (${event.start.timeZone})`);
+  })
+
+  test('render event location when collapsed', () => {
+    const location = EventWrapper.find('.location');
+    expect(location).toHaveLength(1);
+    expect(location.text()).toBe(`@${event.summary} | ${event.location}`);
   })
 })
