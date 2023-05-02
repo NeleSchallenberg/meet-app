@@ -31,7 +31,7 @@ _TEST SCENARIO 1: When user hasn't searched for a city, show upcoming events fro
 **TESTS**
 
 - Render list of events
-- Render correct number of events
+- Render number of events
 
 _TEST SCENARIO 2: User should see a list of suggestions when they search for a city._
 
@@ -40,7 +40,7 @@ _TEST SCENARIO 2: User should see a list of suggestions when they search for a c
 **TESTS**
 
 - Render CitySearch
-- Render text input
+- Render text input field
 - Renders a list of suggestions
 - Renders text input correctly
 - Change state when text input changes
@@ -71,14 +71,25 @@ _TEST SCENARIO 1: An event element is collapsed by default._
 - Render event summary as title
 - Event is collapsed by default
 - Render event start time when collapsed
+- Render event location when collapsed
+- Render button to show details when collapsed
 
 _TEST SCENARIO 2: User can expand an event to see its details._
 
 **Given** a list with all events for a specific city is open, **when** the user clicks on the event, **then** the user should see the event element expanding and showing the events details.
 
+**TESTS**
+
+- Expand details when button is clicked
+- Render details when expanded
+
 _TEST SCENARIO 3: User can collapse an event to hide its details._
 
 **Given** user has expanded an event to see the details,**when** the user clicks on the event,**then** the user should see the event collapsing and hiding the details again.
+
+**TESTS**
+
+- Collapse details when button is clicked
 
 ---
 
@@ -90,9 +101,19 @@ _TEST SCENARIO 1: When user hasn’t specified a number, 32 is the default numbe
 
 **Given** user hasn't specified a number, **when** the user scrolls the list of events, **then** the user should see 32 events.
 
+**TESTS**
+
+- Render number input field
+- Render default value for number of events
+
 _TEST SCENARIO 2: User can change the number of events they want to see._
 
 **Given** user is seeing 32 events by default, **when** the user specifies the number of events, **then** the user should see the desired number of events on screen.
+
+**TESTS**
+
+- Render number input correctly
+- Change state when number input changes
 
 ---
 
