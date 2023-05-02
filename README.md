@@ -28,13 +28,32 @@ _TEST SCENARIO 1: When user hasn't searched for a city, show upcoming events fro
 
 **Given** user hasn’t searched for any city, **when** the user opens the app, **then** the user should see a list of all upcoming events.
 
+**TESTS**
+
+- Render list of events
+- Render correct number of events
+
 _TEST SCENARIO 2: User should see a list of suggestions when they search for a city._
 
 **Given** the main page is open, **when** the user starts typing in the city text box, **then** the user should see a list of cities (suggestions) that match what they’ve typed.
 
+**TESTS**
+
+- Render CitySearch
+- Render text input
+- Renders a list of suggestions
+- Renders text input correctly
+- Change state when text input changes
+- Render list of suggestions correctly
+- Suggestion list match the query when changed
+
 _TEST SCENARIO 3: User can select a city from the suggested list._
 
 **Given** user was typing “Berlin” in the city text box and the list of suggested cities is showing, **when** the user selects a city (e.g., “Berlin, Germany”) from the list, **then** the city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city.
+
+**TESTS**
+
+- Selecting a suggestion should change query state
 
 ---
 
@@ -45,6 +64,13 @@ As a user I should be able to show and hide an event's details so that I can get
 _TEST SCENARIO 1: An event element is collapsed by default._
 
 **Given** user has selected a city from the suggested list (or not), **when** the user scrolls through the list of events (in a specific city or all upcoming events), **then** the user should see all event elements without their details.
+
+**TESTS**
+
+- Render event component
+- Render event summary as title
+- Event is collapsed by default
+- Render event start time when collapsed
 
 _TEST SCENARIO 2: User can expand an event to see its details._
 
