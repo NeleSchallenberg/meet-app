@@ -22,7 +22,11 @@ describe('<Event /> component', () => {
     const title = EventWrapper.find('.title');
     expect(title).toHaveLength(1);
     expect(title.text()).toBe(event.summary);
-    
   })
 
+  test('render event start time when collapsed', () => {
+    const time = EventWrapper.find('p.time');
+    expect(time).toHaveLength(1);
+    expect(time.text()).toBe(`${event.start.dateTime} (${event.start.timeZone})`);
+  })
 })
