@@ -43,5 +43,12 @@ describe('<Event /> component', () => {
     expect(detailsButton.text()).toBe('Show details');
   })
 
+  test('expand details when button is clicked', () => {
+    const detailsButton = EventWrapper.find('.details');
+    expect(detailsButton.text()).toBe('Show details');
+    detailsButton.simulate('click');
+    expect(EventWrapper.state('collapsed')).toBe(false);
+  })
+
  
 })
