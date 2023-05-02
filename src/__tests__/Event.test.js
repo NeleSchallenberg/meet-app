@@ -14,24 +14,15 @@ describe('<Event /> component', () => {
     expect(EventWrapper).toBeDefined();
   })
 
+  test('event is collapsed by default', () => {
+    expect(EventWrapper.state('collapsed')).toBe(true);
+  })
+
   test('render event summary as title', () => {
     const title = EventWrapper.find('.title');
     expect(title).toHaveLength(1);
     expect(title.text()).toBe(event.summary);
     
   })
-
-
-  // test('event is collapsed by default', () => {
-  //   expect(EventWrapper.state('collapsed')).toBe(true);
-  // })
-
-  // test('render event information while collapsed', () => {
-    
-  // })
-
-  // test('render event details correctly when expanded', () => {
-    
-  // })
 
 })
