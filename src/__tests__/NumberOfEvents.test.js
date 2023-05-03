@@ -8,4 +8,9 @@ describe('<NumberOfEvents /> component', () => {
     NumberOfEventsWrapper = shallow(<NumberOfEvents />);
   });
 
+  test('render number input field', () => {
+    expect(NumberOfEventsWrapper.find('.number')).toHaveLength(1);
+  });
+
+  
 });

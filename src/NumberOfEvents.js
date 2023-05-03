@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 
 class NumberOfEvents extends Component {
   render() {
-    return 
+    return (
+      <input className='number'>
+        
+      </input>
+    )
   }
 }
 
