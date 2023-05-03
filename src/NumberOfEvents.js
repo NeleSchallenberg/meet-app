@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class NumberOfEvents extends Component {
   state = {
     default: 32,
@@ -19,8 +18,7 @@ class NumberOfEvents extends Component {
         type='number'
         value={this.state.query}
         onChange={this.handleChange}
-      >
-      </input>
+      />
     )
   }
 }

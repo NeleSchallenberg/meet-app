@@ -10,6 +10,8 @@ describe('<Event /> component', () => {
     EventWrapper = shallow(<Event event={event} />)
   })
 
+  // TEST SCENARIO 1: An event element is collapsed by default
+
   test('render event component', () => {
     expect(EventWrapper).toBeDefined();
   })
@@ -43,6 +45,7 @@ describe('<Event /> component', () => {
     expect(detailsButton.text()).toBe('Show details');
   })
 
+  // TEST SCENARIO 2: User can expand an event to see its details
 
   test('expand details when button is clicked', () => {
     const detailsButton = EventWrapper.find('.details');

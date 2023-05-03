@@ -11,6 +11,8 @@ describe('<CitySearch /> component', () => {
     CitySearchWrapper = shallow(<CitySearch locations={locations}/>);
   });
 
+  // TEST SCENARIO 2: User should see a list of suggestions when they search for a city
+
   test('render text input field', () => {
     expect(CitySearchWrapper.find('.city')).toHaveLength(1);
   });
@@ -19,7 +21,7 @@ describe('<CitySearch /> component', () => {
     expect(CitySearchWrapper.find('.suggestions')).toHaveLength(1);
   });
 
-  test('render text input correctly', () => {
+  test('render user input correctly', () => {
     const query = CitySearchWrapper.state('query');
     expect(CitySearchWrapper.find('.city').prop('value')).toBe(query);
   });
@@ -55,6 +57,8 @@ describe('<CitySearch /> component', () => {
     expect(CitySearchWrapper.state("suggestions")).toEqual(filteredLocations);
   });
 
+  // TEST SCENARIO 3: User can select a city from the suggested list
+  
   test("selecting a suggestion should change query state", () => {
     CitySearchWrapper.setState({
       query: 'Berlin'  });
