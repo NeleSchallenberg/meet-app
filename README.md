@@ -104,7 +104,7 @@ _TEST SCENARIO 1: When user hasn’t specified a number, 32 is the default numbe
 **TESTS**
 
 - Render number input field
-- Render default value for number of events
+- Render 32 as default value for number of events
 
 _TEST SCENARIO 2: User can change the number of events they want to see._
 
@@ -112,7 +112,7 @@ _TEST SCENARIO 2: User can change the number of events they want to see._
 
 **TESTS**
 
-- Render number input correctly
+- Render user input correctly
 - Change state when number input changes
 
 ---
