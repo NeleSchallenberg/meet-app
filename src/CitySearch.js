@@ -4,7 +4,7 @@ class CitySearch extends Component {
   state = {
     query: '',
     suggestions: []
-  }
+  };
 
   handleInputChanged = (event) => {
     const value = event.target.value;
@@ -21,11 +21,11 @@ class CitySearch extends Component {
     this.setState({
       query: suggestion
     });
-  }
+  };
 
   render() {
     return (
-      <div className='CitySearch'>
+      <div className='city-search'>
         <input
           type='text'
           className='city'
@@ -44,8 +44,8 @@ class CitySearch extends Component {
           </li>
         </ul>
       </div>
-    );
+    )
   }
-}
+};
 
 export default CitySearch;

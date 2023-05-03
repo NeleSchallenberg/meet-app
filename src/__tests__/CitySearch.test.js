@@ -12,7 +12,6 @@ describe('<CitySearch /> component', () => {
   });
 
   // TEST SCENARIO 2: User should see a list of suggestions when they search for a city
-
   test('render text input field', () => {
     expect(CitySearchWrapper.find('.city')).toHaveLength(1);
   });
@@ -47,24 +46,23 @@ describe('<CitySearch /> component', () => {
 
   test('suggestion list match the query when changed', () => {
     CitySearchWrapper.setState({ query: '', suggestions: [] });
-    CitySearchWrapper.find(".city").simulate("change", {
-      target: { value: "Berlin" },
+    CitySearchWrapper.find('.city').simulate('change', {
+      target: { value: 'Berlin' },
     });
-    const query = CitySearchWrapper.state("query");
+    const query = CitySearchWrapper.state('query');
     const filteredLocations = locations.filter((location) => {
       return location.toUpperCase().indexOf(query.toUpperCase()) > -1;
     });
-    expect(CitySearchWrapper.state("suggestions")).toEqual(filteredLocations);
+    expect(CitySearchWrapper.state('suggestions')).toEqual(filteredLocations);
   });
 
   // TEST SCENARIO 3: User can select a city from the suggested list
-  
-  test("selecting a suggestion should change query state", () => {
+  test('selecting a suggestion should change query state', () => {
     CitySearchWrapper.setState({
       query: 'Berlin'  });
     const suggestions = CitySearchWrapper.state('suggestions');
     CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
-    expect(CitySearchWrapper.state("query")).toBe(suggestions[0]);
+    expect(CitySearchWrapper.state('query')).toBe(suggestions[0]);
   });
 
 });

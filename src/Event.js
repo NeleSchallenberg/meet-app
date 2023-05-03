@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Event extends Component {
   state = {collapsed: true};
@@ -24,7 +24,7 @@ class Event extends Component {
             <a className='link'>See details on Google Calendar</a>
             <p className='description'>{event.description}</p>
           </div>
-        )}
+        )};
 
         <button 
           className='details'
@@ -33,6 +33,6 @@ class Event extends Component {
       </div>
     )
   }
-}
+};
 
 export default Event;
