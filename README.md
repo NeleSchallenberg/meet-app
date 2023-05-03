@@ -30,8 +30,10 @@ _TEST SCENARIO 1: When user hasn't searched for a city, show upcoming events fro
 
 **TESTS**
 
+- Render city search component
+- Render number of events component
 - Render list of events
-- Render number of events
+- Render correct number of events
 
 _TEST SCENARIO 2: User should see a list of suggestions when they search for a city._
 
@@ -39,10 +41,9 @@ _TEST SCENARIO 2: User should see a list of suggestions when they search for a c
 
 **TESTS**
 
-- Render CitySearch
 - Render text input field
-- Renders a list of suggestions
-- Renders text input correctly
+- Render a list of suggestions
+- Render user input correctly
 - Change state when text input changes
 - Render list of suggestions correctly
 - Suggestion list match the query when changed
@@ -68,10 +69,8 @@ _TEST SCENARIO 1: An event element is collapsed by default._
 **TESTS**
 
 - Render event component
-- Render event summary as title
 - Event is collapsed by default
-- Render event start time when collapsed
-- Render event location when collapsed
+- Render event overview when collapsed
 - Render button to show details when collapsed
 
 _TEST SCENARIO 2: User can expand an event to see its details._
