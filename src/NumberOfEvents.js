@@ -13,12 +13,14 @@ class NumberOfEvents extends Component {
 
   render() {
     return (
-      <input 
-        className='amount'
-        type='number'
-        value={this.state.query}
-        onChange={this.handleChange}
-      />
+      <div className='event-amount'>
+        <input 
+          className='amount'
+          type='number'
+          value={this.state.query}
+          onChange={this.handleChange}
+        />
+      </div>
     )
   }
 };

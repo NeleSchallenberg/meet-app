@@ -21,7 +21,7 @@ class Event extends Component {
         {!collapsed && (
           <div className='event-details'>
             <h3 className='about'>About event:</h3>
-            <a className='link'>See details on Google Calendar</a>
+            <a className='link' href={event.htmlLink}>See details on Google Calendar</a>
             <p className='description'>{event.description}</p>
           </div>
         )};

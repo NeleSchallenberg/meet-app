@@ -21,9 +21,9 @@ describe('<Event /> component', () => {
 
   test('render event overview when collapsed', () => {
     expect(EventWrapper.state('collapsed')).toBe(true);
-    const title = EventWrapper.find('.title');
-    const time = EventWrapper.find('.time');
-    const location = EventWrapper.find('.location');
+    const title = EventWrapper.find('h2.title');
+    const time = EventWrapper.find('p.time');
+    const location = EventWrapper.find('p.location');
     expect(title).toHaveLength(1);
     expect(title.text()).toBe(event.summary);
     expect(time).toHaveLength(1);
@@ -33,14 +33,14 @@ describe('<Event /> component', () => {
   });
 
   test('render button to show details when collapsed', () => {
-    const detailsButton = EventWrapper.find('.details');
+    const detailsButton = EventWrapper.find('button.details');
     expect(detailsButton).toHaveLength(1);
     expect(detailsButton.text()).toBe('Show details');
   });
 
   // TEST SCENARIO 2: User can expand an event to see its details
   test('expand details when button is clicked', () => {
-    const detailsButton = EventWrapper.find('.details');
+    const detailsButton = EventWrapper.find('button.details');
     expect(detailsButton.text()).toBe('Show details');
     detailsButton.simulate('click');
     EventWrapper.setState({ collapsed: false});
@@ -48,15 +48,16 @@ describe('<Event /> component', () => {
 
   test('render details when expanded', () => {
     expect(EventWrapper.state('collapsed')).toBe(false);
-    const about = EventWrapper.find('.about');
-    const link = EventWrapper.find('.link');
-    const description = EventWrapper.find('.description');
-    const detailsButton = EventWrapper.find('.details');
+    const about = EventWrapper.find('h3.about');
+    const link = EventWrapper.find('a.link');
+    const description = EventWrapper.find('p.description');
+    const detailsButton = EventWrapper.find('button.details');
 
     expect(about).toHaveLength(1);
     expect(about.text()).toBe('About event:');
     expect(link).toHaveLength(1);
     expect(link.text()).toBe('See details on Google Calendar');
+    expect(link.prop('href')).toBe(event.htmlLink);
     expect(description).toHaveLength(1);
     expect(description.text()).toBe(event.description);
     expect(detailsButton.text()).toBe('Hide details');
@@ -65,7 +66,7 @@ describe('<Event /> component', () => {
   // TEST SCENARIO 3: User can collapse an event to hide its details
   test('collapse details when button is clicked', () => {
     expect(EventWrapper.state('collapsed')).toBe(false);
-    const detailsButton = EventWrapper.find('.details');
+    const detailsButton = EventWrapper.find('button.details');
     expect(detailsButton.text()).toBe('Hide details');
     detailsButton.simulate('click');
     EventWrapper.setState({ collapsed: true});

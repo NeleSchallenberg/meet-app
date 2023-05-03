@@ -13,16 +13,16 @@ describe('<CitySearch /> component', () => {
 
   // TEST SCENARIO 2: User should see a list of suggestions when they search for a city
   test('render text input field', () => {
-    expect(CitySearchWrapper.find('.city')).toHaveLength(1);
+    expect(CitySearchWrapper.find('input.city')).toHaveLength(1);
   });
 
   test('render a list of suggestions', () => {
-    expect(CitySearchWrapper.find('.suggestions')).toHaveLength(1);
+    expect(CitySearchWrapper.find('ul.suggestions')).toHaveLength(1);
   });
 
   test('render user input correctly', () => {
     const query = CitySearchWrapper.state('query');
-    expect(CitySearchWrapper.find('.city').prop('value')).toBe(query);
+    expect(CitySearchWrapper.find('input.city').prop('value')).toBe(query);
   });
 
   test('change state when text input changes', () => {
@@ -30,7 +30,7 @@ describe('<CitySearch /> component', () => {
       query: 'Munich'
     });
     const eventObject = { target: { value: 'Berlin' }};
-    CitySearchWrapper.find('.city').simulate('change', eventObject);
+    CitySearchWrapper.find('input.city').simulate('change', eventObject);
     expect(CitySearchWrapper.state('query')).toBe('Berlin');
   });
 
@@ -38,15 +38,15 @@ describe('<CitySearch /> component', () => {
     const locations = extractLocations(mockData);
     CitySearchWrapper.setState({ suggestions: locations });
     const suggestions = CitySearchWrapper.state('suggestions');
-    expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(suggestions.length + 1);
+    expect(CitySearchWrapper.find('ul.suggestions li')).toHaveLength(suggestions.length + 1);
     for (let i = 0; i < suggestions.length; i += 1) {
-      expect(CitySearchWrapper.find('.suggestions li').at(i).text()).toBe(suggestions[i]);
+      expect(CitySearchWrapper.find('ul.suggestions li').at(i).text()).toBe(suggestions[i]);
     }
   });
 
   test('suggestion list match the query when changed', () => {
     CitySearchWrapper.setState({ query: '', suggestions: [] });
-    CitySearchWrapper.find('.city').simulate('change', {
+    CitySearchWrapper.find('input.city').simulate('change', {
       target: { value: 'Berlin' },
     });
     const query = CitySearchWrapper.state('query');
@@ -61,7 +61,7 @@ describe('<CitySearch /> component', () => {
     CitySearchWrapper.setState({
       query: 'Berlin'  });
     const suggestions = CitySearchWrapper.state('suggestions');
-    CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
+    CitySearchWrapper.find('ul.suggestions li').at(0).simulate('click');
     expect(CitySearchWrapper.state('query')).toBe(suggestions[0]);
   });
 
