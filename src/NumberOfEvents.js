@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 
 class NumberOfEvents extends Component {
   state = {
-    number: 32
+    default: 32,
+    query: ''
   }
-  
+
   render() {
     return (
       <input 
-        className='number'
+        className='numberOfEvents'
         type='number'
+        value={this.state.query}
       >
-
       </input>
     )
   }
