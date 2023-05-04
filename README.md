@@ -50,7 +50,7 @@ _TEST SCENARIO 2: User should see a list of suggestions when they search for a c
 
 _TEST SCENARIO 3: User can select a city from the suggested list._
 
-**Given** user was typing “Berlin” in the city text box and the list of suggested cities is showing, **when** the user selects a city (e.g., “Berlin, Germany”) from the list, **then** the city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city.
+**Given** user was typing “Berlin” in the city text box and the list of suggested cities is showing, **when** the user selects a city (e.g., “Berlin, Germany”) from the list, **then** the city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city **and** the list of suggestions should disappear **and** the user should receive a list of upcoming events in that city.
 
 **TESTS**
 
