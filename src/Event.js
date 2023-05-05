@@ -24,7 +24,7 @@ class Event extends Component {
             <a className='link' href={event.htmlLink}>See details on Google Calendar</a>
             <p className='description'>{event.description}</p>
           </div>
-        )};
+        )}
 
         <button 
           className='details'
