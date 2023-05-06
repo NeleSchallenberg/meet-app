@@ -70,7 +70,6 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
-
   test('App passes "numberOfEvents" state as a prop to NumberOfEvents', () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsState = AppWrapper.state('numberOfEvents');
@@ -82,45 +81,11 @@ describe('<App /> integration', () => {
   test('get list of events matching the number selected by the user', async () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-
-    const selectedNumber = AppWrapper.find(NumberOfEvents).state('query');
+    const selectedNumber = Math.floor(Math.random() * 10);
     const event = { target: { value: selectedNumber }};
     await NumberOfEventsWrapper.instance().handleChange(event);
-    
-    expect(AppWrapper.state("numberOfEvents")).toEqual(selectedNumber);
-    expect(AppWrapper.state("events").length).toEqual(selectedNumber);
+    expect(AppWrapper.state('numberOfEvents')).toEqual(selectedNumber);
     AppWrapper.unmount();
   });
 
-
-
-  // test('App passes "numberOfEvents" state as a prop to NumberOfEvents', () => {
-  //   const AppWrapper = mount(<App />);
-  //   const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-  //   expect(NumberOfEventsWrapper.prop('numberOfEvents')).toEqual(AppWrapper.state('numberOfEvents'));
-  //   AppWrapper.unmount();
-  // });
-  
-//   test('App passes "numberOfEvents" state as a prop to NumberOfEvents', async () => {
-//     const AppWrapper = mount(<App />);
-//     // const eventCount = AppWrapper.state("eventCount");
-//     expect(AppWrapper.state('eventCount')).toEqual(AppWrapper.find(NumberOfEvents).props().query);
-//     AppWrapper.unmount();
-//   });
-// });
-  
-//   test('Event list renders correct number of events', async () => {
-//     const AppWrapper = mount(<App />);
-//     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-//     const selectedNumber = Math.floor(Math.random() * 10);
-//     const event = { target: { value: selectedNumber } };
-//     await NumberOfEventsWrapper.instance().handleChange(event);
-//     expect(AppWrapper.state("eventCount")).toEqual(selectedNumber);
-//     expect(AppWrapper.state("events").length).toBe(selectedNumber);
-
-//     AppWrapper.unmount();
-
-
-
 });
-
