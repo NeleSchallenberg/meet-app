@@ -82,8 +82,10 @@ describe('<App /> integration', () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
     const selectedNumber = Math.floor(Math.random() * 10);
+    const selectedNumber = Math.floor(Math.random() * 10);
     const event = { target: { value: selectedNumber }};
     await NumberOfEventsWrapper.instance().handleChange(event);
+    expect(AppWrapper.state('numberOfEvents')).toEqual(selectedNumber);
     expect(AppWrapper.state('numberOfEvents')).toEqual(selectedNumber);
     AppWrapper.unmount();
   });
