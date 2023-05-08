@@ -48,56 +48,6 @@ class App extends Component {
     this.updateEvents(this.state.selectedCity, numberOfEvents);
   }
 
-  // updateEvents = (location, numberOfEvents) => {
-  //   if (!numberOfEvents) {
-  //     getEvents().then((events) => {
-  //       const locationEvents =
-  //         location === "all"
-  //           ? events
-  //           : events.filter((event) => event.location === location);
-  //       const eventsToShow = locationEvents.slice(0, numberOfEvents);
-  //       this.setState({
-  //         events: eventsToShow,
-  //         selectedCity: location,
-  //       });
-  //     });
-  //   } else if (numberOfEvents && !location) {
-  //     getEvents().then((events) => {
-  //       const locationEvents = events.filter((event) =>
-  //         this.state.locations.includes(event.location)
-  //       );
-  //       const eventsToShow = locationEvents.slice(0, this.state.numberOfEvents);
-  //       this.setState({
-  //         events: eventsToShow,
-  //         numberOfEvents: numberOfEvents,
-  //       });
-  //     });
-  //   } else if (this.state.selectedCity === "all") {
-  //     getEvents().then((events) => {
-  //       const locationEvents = events;
-  //       const eventsToShow = locationEvents.slice(0, this.state.numberOfEvents);
-  //       this.setState({
-  //         events: eventsToShow,
-  //         numberOfEvents: numberOfEvents,
-  //       });
-  //     });
-  //   } else {
-  //     getEvents().then((events) => {
-  //       const locationEvents =
-  //         this.state.locations === "all"
-  //           ? events
-  //           : events.filter(
-  //               (event) => this.state.selectedCity === event.location
-  //             );
-  //       const eventsToShow = locationEvents.slice(0, this.state.numberOfEvents);
-  //       this.setState({
-  //         events: eventsToShow,
-  //         numberOfEvents: numberOfEvents,
-  //       });
-  //     });
-  //   }
-  // };  
-
   render() {
     return (
       <div className='app'>
