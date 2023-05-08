@@ -1,23 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
-.App {
+.app {
   text-align: center;
   padding: 2% 5%;
-}
-
-.App * {
-  box-sizing: border-box;
-}
-
-html {
-  text-align: center;
-  padding-inline: 100px;
   background-color: aliceblue;
 }
 
+.app * {
+  box-sizing: border-box;
+}
+
 h1 {
-  margin: 50px;
+  margin: 40px;
   font-size: 50px;
   font-family: 'Roboto Slab', serif;
 }
@@ -54,22 +49,19 @@ input[type="number"] {
   width: 250px;
 }
 
-.CitySearch {
+.city-search {
   display: flex;
   flex-direction: column;
-  flex-basis: 300px;
-  max-width: 300px;
+  flex-basis: 250px;
+  max-width: 250px;
   margin: auto;
   position: relative;
 }
 
 .suggestions {
   width: 250px;
-  position: absolute;
   z-index: 2;
-  align-self: center;
   margin: 0;
-  top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -91,19 +83,20 @@ input[type="number"] {
 }
 
 .event {
-  padding: 10px 10px 35px;
+  padding: 0px 20px 35px;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
   background-color:#fff;
+  min-height: 180px
 }
 
-.details-btn {
+.details {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 8px;
+  bottom: 8px;
   padding: 5px 8px;
   border-radius: 4px;
   outline: none;
