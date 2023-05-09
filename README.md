@@ -98,7 +98,7 @@ As a user I should be able to specify the number of events on screen so that I c
 
 _TEST SCENARIO 1: When user hasn’t specified a number, 32 is the default number._
 
-**Given** user hasn't specified a number, **when** the user scrolls the list of events, **then** the user should see 32 events.
+**Given** user hasn't specified a number of events, **when** the user receives a list of events, **then** the user should see 32 events by default.
 
 **TESTS**
 
