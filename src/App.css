@@ -93,7 +93,7 @@ input[type="number"] {
   min-height: 180px
 }
 
-.details {
+.details-btn {
   position: absolute;
   right: 8px;
   bottom: 8px;

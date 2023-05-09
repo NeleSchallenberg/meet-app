@@ -11,7 +11,7 @@ const feature = loadFeature('./src/features/filterEventsByCity.feature');
 defineFeature(feature, test => {
 
     // SCENARIO 1
-    test('When user hasn’t searched for a city, show upcoming events from all cities.', ({ given, when, then }) => {
+    test('When user hasn’t searched for a city, show upcoming events from all cities', ({ given, when, then }) => {
         given('user hasn’t searched for any city', () => {
         });
         let AppWrapper;

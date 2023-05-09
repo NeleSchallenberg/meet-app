@@ -33,14 +33,14 @@ describe('<Event /> component', () => {
   });
 
   test('render button to show details when collapsed', () => {
-    const detailsButton = EventWrapper.find('button.details');
+    const detailsButton = EventWrapper.find('button.details-btn');
     expect(detailsButton).toHaveLength(1);
     expect(detailsButton.text()).toBe('Show details');
   });
 
   // TEST SCENARIO 2: User can expand an event to see its details
   test('expand details when button is clicked', () => {
-    const detailsButton = EventWrapper.find('button.details');
+    const detailsButton = EventWrapper.find('button.details-btn');
     expect(detailsButton.text()).toBe('Show details');
     detailsButton.simulate('click');
     EventWrapper.setState({ collapsed: false});
@@ -51,7 +51,7 @@ describe('<Event /> component', () => {
     const about = EventWrapper.find('h3.about');
     const link = EventWrapper.find('a.link');
     const description = EventWrapper.find('p.description');
-    const detailsButton = EventWrapper.find('button.details');
+    const detailsButton = EventWrapper.find('button.details-btn');
 
     expect(about).toHaveLength(1);
     expect(about.text()).toBe('About event:');
@@ -66,7 +66,7 @@ describe('<Event /> component', () => {
   // TEST SCENARIO 3: User can collapse an event to hide its details
   test('collapse details when button is clicked', () => {
     expect(EventWrapper.state('collapsed')).toBe(false);
-    const detailsButton = EventWrapper.find('button.details');
+    const detailsButton = EventWrapper.find('button.details-btn');
     expect(detailsButton.text()).toBe('Hide details');
     detailsButton.simulate('click');
     EventWrapper.setState({ collapsed: true});

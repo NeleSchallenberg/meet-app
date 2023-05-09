@@ -64,7 +64,7 @@ As a user I should be able to show and hide an event's details so that I can get
 
 _TEST SCENARIO 1: An event element is collapsed by default._
 
-**Given** user has selected a city from the suggested list (or not), **when** the user scrolls through the list of events (in a specific city or all upcoming events), **then** the user should see all event elements without their details.
+**Given** user received a list with upcoming events, **when** the user scrolls through the list of events, **then** the user should see all event elements without their details.
 
 **TESTS**
 
@@ -75,7 +75,7 @@ _TEST SCENARIO 1: An event element is collapsed by default._
 
 _TEST SCENARIO 2: User can expand an event to see its details._
 
-**Given** a list with all events for a specific city is open, **when** the user clicks on the event, **then** the user should see the event element expanding and showing the events details.
+**Given** a list of collapsed event elements is displayed, **when** the user clicks on the event, **then** the user should see the event element expanding and showing the events details.
 
 **TESTS**
 
