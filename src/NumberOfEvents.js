@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class NumberOfEvents extends Component {
 	state = {
@@ -16,8 +16,8 @@ class NumberOfEvents extends Component {
 			<div>
 				<h3>Number of events:</h3>
 				<input
-					className="numberOfEvents"
-					type="number"
+					className='numberOfEvents'
+					type='number'
 					min={1}
 					max={32}
 					value={this.state.query}

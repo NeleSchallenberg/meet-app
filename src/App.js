@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import "./App.css";
-import EventList from "./EventList";
-import CitySearch from "./CitySearch";
-import NumberOfEvents from "./NumberOfEvents";
-import { getEvents, extractLocations } from "./api";
-import "./nprogress.css";
+import React, { Component } from 'react';
+import './App.css';
+import EventList from './EventList';
+import CitySearch from './CitySearch';
+import NumberOfEvents from './NumberOfEvents';
+import { getEvents, extractLocations } from './api';
+import './nprogress.css';
 
 class App extends Component {
 	state = {
 		events: [],
 		locations: [],
 		numberOfEvents: 32,
-		selectedCity: "all",
+		selectedCity: 'all',
 	};
 
 	componentDidMount() {
@@ -31,7 +31,7 @@ class App extends Component {
 
 		getEvents().then((events) => {
 			const locationEvents =
-				location === "all"
+				location === 'all'
 					? events
 					: events.filter((event) => event.location === location);
 			const eventsToShow = locationEvents.slice(0, numberOfEvents);
@@ -50,7 +50,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="app">
+			<div className='app'>
 				<h1>Meet App</h1>
 				<CitySearch
 					locations={this.state.locations}

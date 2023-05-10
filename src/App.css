@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
 .app {
 	text-align: center;
@@ -14,7 +14,7 @@
 h1 {
 	margin: 40px;
 	font-size: 50px;
-	font-family: "Roboto Slab", serif;
+	font-family: 'Roboto Slab', serif;
 }
 
 ul {
@@ -33,8 +33,8 @@ p {
 	display: block;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type='text'],
+input[type='number'] {
 	padding: 8px 6px 8px 10px;
 	border-radius: 4px;
 	outline: none;
@@ -203,7 +203,7 @@ input[type="number"] {
 	color: #fff;
 	font-size: 14px;
 	letter-spacing: 0.2px;
-	font-family: "Roboto";
+	font-family: 'Roboto';
 }
 
 @media only screen and (min-width: 992px) {
