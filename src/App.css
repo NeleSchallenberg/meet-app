@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
+html {
+	background-color: aliceblue;
+}
 .app {
 	text-align: center;
 	padding: 2% 5%;
-	background-color: aliceblue;
 }
 
 .app * {
@@ -12,9 +14,13 @@
 }
 
 h1 {
-	margin: 40px;
+	margin: 30px;
 	font-size: 50px;
 	font-family: 'Roboto Slab', serif;
+}
+
+h4 {
+	margin-bottom: 8px;
 }
 
 ul {
@@ -23,7 +29,7 @@ ul {
 }
 
 p {
-	margin: 5px 0;
+	margin: 5px auto;
 }
 
 .display-none {
@@ -45,22 +51,48 @@ input[type='number'] {
 	height: 30px;
 }
 
-.city {
-	width: 250px;
-}
-
 .city-search {
+	height: 110px;
 	display: flex;
 	flex-direction: column;
 	flex-basis: 250px;
 	max-width: 250px;
 	margin: auto;
 	position: relative;
+	z-index: 1;
+}
+
+.city {
+	width: 250px;
+}
+
+.number-element {
+	height: 110px;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 200px;
+	max-width: 200px;
+	margin: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.numberOfEvents {
+	width: 200px;
+	text-align: center;
+}
+
+.Alert {
+	position: absolute;
+	top: 75px;
+	font-size: 12px;
+	z-index: 2;
+	align-self: center;
 }
 
 .suggestions {
 	width: 250px;
-	z-index: 2;
+	z-index: 3;
 	margin: 0;
 	font-size: 14px;
 	box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
@@ -122,23 +154,12 @@ input[type='number'] {
 	overflow-x: hidden;
 }
 
-.numberOfEvents {
-	width: 200px;
-	margin-bottom: 15px;
-	text-align: center;
-}
-
 .button-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 	padding: 20px;
 	font-family: sans-serif;
-}
-
-.Alert {
-	position: fixed;
-	top: 20px;
 }
 
 .data-vis-wrapper {

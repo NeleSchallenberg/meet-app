@@ -12,8 +12,12 @@ class NumberOfEvents extends Component {
 		this.props.countEvent(inputValue);
 		this.setState({ query: inputValue });
 		if (inputValue < 1) {
-			this.setState({
-				errorText: 'Select number from 1 to 32',
+			return this.setState({
+				errorText: 'Select a number from 1 to 32.',
+			});
+		} else if (inputValue > 32) {
+			return this.setState({
+				errorText: 'Select a number from 1 to 32.',
 			});
 		} else {
 			return this.setState({
@@ -24,8 +28,8 @@ class NumberOfEvents extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Number of events:</h3>
+			<div className='number-element'>
+				<h4>Number of events:</h4>
 				<input
 					className='numberOfEvents'
 					type='number'

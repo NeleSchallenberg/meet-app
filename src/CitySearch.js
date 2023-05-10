@@ -18,6 +18,7 @@ class CitySearch extends Component {
 		if (suggestions.length === 0) {
 			this.setState({
 				query: value,
+				showSuggestions: false,
 				infoText:
 					'We can not find the city you are looking for. Please try another one.',
 			});
@@ -43,8 +44,7 @@ class CitySearch extends Component {
 	render() {
 		return (
 			<div className='city-search'>
-				<h3>City search:</h3>
-				<InfoAlert text={this.state.infoText} />
+				<h4>Select a city:</h4>
 				<input
 					type='text'
 					className='city'
@@ -70,6 +70,7 @@ class CitySearch extends Component {
 						<b>See all cities</b>
 					</li>
 				</ul>
+				<InfoAlert text={this.state.infoText} />
 			</div>
 		);
 	}
