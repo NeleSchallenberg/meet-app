@@ -20,7 +20,7 @@ class Event extends Component {
 
 				{!collapsed && (
 					<div className='event-details'>
-						<h3 className='about'>About event:</h3>
+						<h2 className='about'>About event:</h2>
 						<a className='link' href={event.htmlLink}>
 							See details on Google Calendar
 						</a>

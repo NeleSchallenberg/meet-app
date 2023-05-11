@@ -44,7 +44,7 @@ class CitySearch extends Component {
 	render() {
 		return (
 			<div className='city-search'>
-				<h2>Select a city:</h2>
+				<h2>Choose your nearest city:</h2>
 				<input
 					aria-labelledby='city search'
 					type='text'
