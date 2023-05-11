@@ -5,6 +5,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
+import { OfflineAlert } from './Alert';
 
 class App extends Component {
 	state = {
@@ -12,6 +13,7 @@ class App extends Component {
 		locations: [],
 		numberOfEvents: 32,
 		selectedCity: 'all',
+		offlineText: '',
 	};
 
 	componentDidMount() {
@@ -39,6 +41,16 @@ class App extends Component {
 				events: eventsToShow,
 				selectedCity: location,
 			});
+			if (!navigator.onLine) {
+				this.setState({
+					offlineText:
+						'You seem to be offline! Events are loaded from the chache.',
+				});
+			} else {
+				this.setState({
+					offlineText: '',
+				});
+			}
 		});
 	};
 	countEvent = (numberOfEvents) => {
@@ -51,6 +63,10 @@ class App extends Component {
 	render() {
 		return (
 			<div className='app'>
+				<OfflineAlert
+					className='offline-alert'
+					text={this.state.offlineText}
+				/>
 				<h1>Meet App</h1>
 				<CitySearch
 					locations={this.state.locations}
