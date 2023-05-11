@@ -79,7 +79,7 @@ class App extends Component {
 
 	render() {
 		if (this.state.showWelcomeScreen === undefined)
-			return <div className='App' />;
+			return <div className='app' />;
 		return (
 			<div className='app'>
 				<OfflineAlert
@@ -87,6 +87,10 @@ class App extends Component {
 					text={this.state.offlineText}
 				/>
 				<h1>Meet App</h1>
+				<h4 className='subtitle'>
+					Find upcoming events around the world for full-stack
+					developers.
+				</h4>
 				<CitySearch
 					locations={this.state.locations}
 					updateEvents={this.updateEvents}
