@@ -31,6 +31,7 @@ class NumberOfEvents extends Component {
 			<div className='number-element'>
 				<h4>Number of events:</h4>
 				<input
+					aria-label='number of events'
 					className='numberOfEvents'
 					type='number'
 					min={1}
