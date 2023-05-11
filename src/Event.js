@@ -14,7 +14,7 @@ class Event extends Component {
 
 		return (
 			<div className='event'>
-				<h2 className='title'>{event.summary}</h2>
+				<h3 className='title'>{event.summary}</h3>
 				<p className='time'>{`${event.start.dateTime} (${event.start.timeZone})`}</p>
 				<p className='location'>{`@${event.summary} | ${event.location}`}</p>
 
