@@ -29,7 +29,7 @@ class NumberOfEvents extends Component {
 	render() {
 		return (
 			<div className='number-element'>
-				<h4>Number of events:</h4>
+				<h3>Number of events:</h3>
 				<input
 					aria-label='number of events'
 					className='numberOfEvents'
