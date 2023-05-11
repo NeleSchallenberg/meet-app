@@ -46,7 +46,7 @@ class CitySearch extends Component {
 			<div className='city-search'>
 				<h3>Select a city:</h3>
 				<input
-					aria-label='city search'
+					aria-labelledby='city search'
 					type='text'
 					className='city'
 					value={this.state.query}
