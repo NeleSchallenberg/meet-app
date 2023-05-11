@@ -41,18 +41,20 @@ class App extends Component {
 				events: eventsToShow,
 				selectedCity: location,
 			});
-			if (!navigator.onLine) {
-				this.setState({
-					offlineText:
-						'You seem to be offline! Events are loaded from the chache.',
-				});
-			} else {
-				this.setState({
-					offlineText: '',
-				});
-			}
 		});
+
+		if (!navigator.onLine) {
+			this.setState({
+				offlineText:
+					'You seem to be offline! Events are loaded from the chache.',
+			});
+		} else {
+			this.setState({
+				offlineText: '',
+			});
+		}
 	};
+
 	countEvent = (numberOfEvents) => {
 		this.setState({
 			numberOfEvents: numberOfEvents,
