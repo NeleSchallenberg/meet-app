@@ -137,7 +137,7 @@ input[type='number'] {
 
 .event {
 	padding: 0px 20px 35px;
-	margin-bottom: 10px;
+	margin: 10px 60px;
 	text-align: left;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -217,7 +217,7 @@ input[type='number'] {
 }
 
 .google-btn {
-	width: 184px;
+	width: 200px;
 	height: 42px;
 	margin: 1rem;
 	background-color: #fff;
@@ -249,12 +249,14 @@ input[type='number'] {
 }
 .btn-text {
 	float: right;
-	margin: 11px 11px 0 0;
+	margin-top: 11px;
+	margin-right: 10px;
 	background-color: #fff;
 	border: none;
 	font-size: 14px;
-	letter-spacing: 0.2px;
 	font-family: 'Roboto';
+	letter-spacing: 0.2px;
+	padding: none;
 }
 
 .welcome-screen-link {
