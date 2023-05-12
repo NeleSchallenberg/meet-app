@@ -14,6 +14,10 @@ body {
 	box-sizing: border-box;
 }
 
+.data-vis-wrapper {
+	width: 100vw;
+}
+
 .offline-alert {
 	padding: 20px;
 	background-color: white;

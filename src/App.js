@@ -5,8 +5,10 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import './nprogress.css';
 import { OfflineAlert } from './Alert';
-import WelcomeScreen from './WelcomeScreen';
-import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
+// import WelcomeScreen from './WelcomeScreen';
+import EventGenre from './EventGenre';
+import { getEvents, extractLocations, checkToken } from './api';
+// import { getAccessToken } from './api';
 import {
 	ScatterChart,
 	Scatter,
@@ -36,16 +38,16 @@ class App extends Component {
 		const searchParams = new URLSearchParams(window.location.search);
 		const code = searchParams.get('code');
 		this.setState({ showWelcomeScreen: !(code || isTokenValid) });
-		if ((code || isTokenValid) && this.mounted) {
-			getEvents().then((events) => {
-				if (this.mounted) {
-					this.setState({
-						events,
-						locations: extractLocations(events),
-					});
-				}
-			});
-		}
+		// if ((code || isTokenValid) && this.mounted) {
+		getEvents().then((events) => {
+			if (this.mounted) {
+				this.setState({
+					events,
+					locations: extractLocations(events),
+				});
+			}
+		});
+		// }
 	}
 
 	updateEvents = (location, numberOfEvents) => {
@@ -120,36 +122,39 @@ class App extends Component {
 					numberOfEvents={this.state.numberOfEvents}
 					countEvent={this.countEvent}
 				/>
-				<ResponsiveContainer height={400}>
-					<ScatterChart
-						width={1200}
-						height={250}
-						margin={{
-							top: 20,
-							right: 20,
-							bottom: 10,
-							left: 10,
-						}}>
-						<CartesianGrid strokeDasharray='3 3' />
-						<XAxis dataKey='city' type='category' name='city' />
-						<YAxis
-							dataKey='number'
-							type='number'
-							name='number of events'
-						/>
+				<div className='data-vis-wrapper'>
+					<EventGenre events={this.state.events} />
+					<ResponsiveContainer height={400}>
+						<ScatterChart
+							width={1200}
+							height={250}
+							margin={{
+								top: 20,
+								right: 20,
+								bottom: 10,
+								left: 10,
+							}}>
+							<CartesianGrid strokeDasharray='3 3' />
+							<XAxis dataKey='city' type='category' name='city' />
+							<YAxis
+								dataKey='number'
+								type='number'
+								name='number of events'
+							/>
 
-						<Tooltip cursor={{ strokeDasharray: '3 3' }} />
+							<Tooltip cursor={{ strokeDasharray: '3 3' }} />
 
-						<Scatter data={this.getData()} fill='#8884d8' />
-					</ScatterChart>
-				</ResponsiveContainer>
+							<Scatter data={this.getData()} fill='#8884d8' />
+						</ScatterChart>
+					</ResponsiveContainer>
+				</div>
 				<EventList events={this.state.events} />
-				<WelcomeScreen
+				{/* <WelcomeScreen
 					showWelcomeScreen={this.state.showWelcomeScreen}
 					getAccessToken={() => {
 						getAccessToken();
 					}}
-				/>
+				/> */}
 			</div>
 		);
 	}
