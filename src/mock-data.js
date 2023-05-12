@@ -38,6 +38,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -78,6 +79,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -118,6 +120,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -158,6 +161,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -198,6 +202,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -238,6 +243,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -278,6 +284,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -318,6 +325,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -358,6 +366,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -398,6 +407,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -438,6 +448,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -478,6 +489,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -518,6 +530,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -558,6 +571,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -598,6 +612,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -638,6 +653,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -678,6 +694,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -718,6 +735,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -758,6 +776,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -798,6 +817,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -838,6 +858,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -878,6 +899,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -918,6 +940,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -958,6 +981,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -998,6 +1022,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1038,6 +1063,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1078,6 +1104,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1118,6 +1145,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1158,6 +1186,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1198,6 +1227,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1238,6 +1268,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 	{
 		kind: 'calendar#event',
@@ -1278,6 +1309,7 @@ const mockData = [
 		reminders: {
 			useDefault: true,
 		},
+		eventType: 'default',
 	},
 ];
 
