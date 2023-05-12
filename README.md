@@ -11,12 +11,12 @@ Serverless functions will be used to authorize users, by requesting and deliveri
 
 ## Key Features
 
-- Filter events by city
-- Show/hide event details
-- Specify number of events
-- Use the app when offline
-- View a chart showing the number of upcoming events by city
-- Add an app shortcut to the home screen
+-   Filter events by city
+-   Show/hide event details
+-   Specify number of events
+-   Use the app when offline
+-   View a chart showing the number of upcoming events by city
+-   Add an app shortcut to the home screen
 
 ## User Stories
 
@@ -30,10 +30,10 @@ _TEST SCENARIO 1: When user hasn't searched for a city, show upcoming events fro
 
 **TESTS**
 
-- Render city search component
-- Render number of events component
-- Render list of events
-- Render correct number of events
+-   Render city search component
+-   Render number of events component
+-   Render list of events
+-   Render correct number of events
 
 _TEST SCENARIO 2: User should see a list of suggestions when they search for a city._
 
@@ -41,12 +41,12 @@ _TEST SCENARIO 2: User should see a list of suggestions when they search for a c
 
 **TESTS**
 
-- Render text input field
-- Render a list of suggestions
-- Render user input correctly
-- Change state when text input changes
-- Render list of suggestions correctly
-- Suggestion list match the query when changed
+-   Render text input field
+-   Render a list of suggestions
+-   Render user input correctly
+-   Change state when text input changes
+-   Render list of suggestions correctly
+-   Suggestion list match the query when changed
 
 _TEST SCENARIO 3: User can select a city from the suggested list._
 
@@ -54,7 +54,7 @@ _TEST SCENARIO 3: User can select a city from the suggested list._
 
 **TESTS**
 
-- Selecting a suggestion should change query state
+-   Selecting a suggestion should change query state
 
 ---
 
@@ -68,10 +68,10 @@ _TEST SCENARIO 1: An event element is collapsed by default._
 
 **TESTS**
 
-- Render event component
-- Event is collapsed by default
-- Render event overview when collapsed
-- Render button to show details when collapsed
+-   Render event component
+-   Event is collapsed by default
+-   Render event overview when collapsed
+-   Render button to show details when collapsed
 
 _TEST SCENARIO 2: User can expand an event to see its details._
 
@@ -79,8 +79,8 @@ _TEST SCENARIO 2: User can expand an event to see its details._
 
 **TESTS**
 
-- Expand details when button is clicked
-- Render details when expanded
+-   Expand details when button is clicked
+-   Render details when expanded
 
 _TEST SCENARIO 3: User can collapse an event to hide its details._
 
@@ -88,7 +88,7 @@ _TEST SCENARIO 3: User can collapse an event to hide its details._
 
 **TESTS**
 
-- Collapse details when button is clicked
+-   Collapse details when button is clicked
 
 ---
 
@@ -102,8 +102,8 @@ _TEST SCENARIO 1: When user hasn’t specified a number, 32 is the default numbe
 
 **TESTS**
 
-- Render number input field
-- Render 32 as default value for number of events
+-   Render number input field
+-   Render 32 as default value for number of events
 
 _TEST SCENARIO 2: User can change the number of events they want to see._
 
@@ -111,8 +111,8 @@ _TEST SCENARIO 2: User can change the number of events they want to see._
 
 **TESTS**
 
-- Render user input correctly
-- Change state when number input changes
+-   Render user input correctly
+-   Change state when number input changes
 
 ---
 
@@ -142,19 +142,19 @@ _TEST SCENARIO 1: Show a chart with the number of upcoming events in each city._
 
 ## Technical requirements
 
-- Built with React and TDD technique
-- Uses Google Calendar API and OAuth2 authentication
-- Uses serverless functions (AWS lambda) for authorization server
-- Hostet in Git repository on GitHub and deployed on GitHub Pages
-- Displays well on all screen sizes (responsive) and works on latest versions of Chrome, Firefox, Safari, Edge, Opera and IE11
-- Passes [Lighthouse’s PWA checklist](https://developer.chrome.com/docs/lighthouse/overview/)
-- Works offline or in slow network conditions with the help of a service worker
-- Can be installed on desktop or added to home screen
-- Uses React axios and async/await for API call
-- Implements alert system using an OOP approach
-- Uses data visualization (recharts)
-- Covered by tests with coverage rate >= 90%.
-- Monitored by an online monitoring tool
+-   Built with React and TDD technique
+-   Uses Google Calendar API and OAuth2 authentication
+-   Uses serverless functions (AWS lambda) for authorization server
+-   Hostet in Git repository on GitHub and deployed on GitHub Pages
+-   Displays well on all screen sizes (responsive) and works on latest versions of Chrome, Firefox, Safari, Edge, Opera and IE11
+-   Passes [Lighthouse’s PWA checklist](https://developer.chrome.com/docs/lighthouse/overview/)
+-   Works offline or in slow network conditions with the help of a service worker
+-   Can be installed on desktop or added to home screen
+-   Uses React axios and async/await for API call
+-   Implements alert system using an OOP approach
+-   Uses data visualization (recharts)
+-   Covered by tests with coverage rate >= 90%.
+-   Monitored by an online monitoring tool
 
 ## Live Version
 
@@ -165,3 +165,8 @@ https://neleschallenberg.github.io/meet-app/
 [Project Brief](https://images.careerfoundry.com/public/courses/fullstack-immersion/full-stack-project-briefs/A4-Project-Brief-Jan2023.pdf)
 <br>
 [Google Calendar API](https://developers.google.com/calendar/api/guides/overview)
+
+## Web View
+
+![Meet App web view](https://github.com/NeleSchallenberg/meet-app/blob/main/files/screenshot-large.png)
+![Meet App web view](https://github.com/NeleSchallenberg/meet-app/blob/main/files/screenshot-detail.png)
