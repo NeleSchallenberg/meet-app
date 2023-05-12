@@ -5,10 +5,10 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import './nprogress.css';
 import { OfflineAlert } from './Alert';
-// import WelcomeScreen from './WelcomeScreen';
+import WelcomeScreen from './WelcomeScreen';
 import EventGenre from './EventGenre';
 import { getEvents, extractLocations, checkToken } from './api';
-// import { getAccessToken } from './api';
+import { getAccessToken } from './api';
 import {
 	ScatterChart,
 	Scatter,
@@ -38,16 +38,16 @@ class App extends Component {
 		const searchParams = new URLSearchParams(window.location.search);
 		const code = searchParams.get('code');
 		this.setState({ showWelcomeScreen: !(code || isTokenValid) });
-		// if ((code || isTokenValid) && this.mounted) {
-		getEvents().then((events) => {
-			if (this.mounted) {
-				this.setState({
-					events,
-					locations: extractLocations(events),
-				});
-			}
-		});
-		// }
+		if ((code || isTokenValid) && this.mounted) {
+			getEvents().then((events) => {
+				if (this.mounted) {
+					this.setState({
+						events,
+						locations: extractLocations(events),
+					});
+				}
+			});
+		}
 	}
 
 	updateEvents = (location, numberOfEvents) => {
@@ -126,8 +126,6 @@ class App extends Component {
 					<EventGenre events={this.state.events} />
 					<ResponsiveContainer height={400}>
 						<ScatterChart
-							width={1200}
-							height={250}
 							margin={{
 								top: 20,
 								right: 20,
@@ -149,12 +147,12 @@ class App extends Component {
 					</ResponsiveContainer>
 				</div>
 				<EventList events={this.state.events} />
-				{/* <WelcomeScreen
+				<WelcomeScreen
 					showWelcomeScreen={this.state.showWelcomeScreen}
 					getAccessToken={() => {
 						getAccessToken();
 					}}
-				/> */}
+				/>
 			</div>
 		);
 	}
