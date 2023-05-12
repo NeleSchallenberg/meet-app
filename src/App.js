@@ -14,6 +14,7 @@ import {
 	YAxis,
 	CartesianGrid,
 	Tooltip,
+	ResponsiveContainer,
 } from 'recharts';
 
 class App extends Component {
@@ -45,10 +46,6 @@ class App extends Component {
 				}
 			});
 		}
-	}
-
-	componentWillUnmount() {
-		this.mounted = false;
 	}
 
 	updateEvents = (location, numberOfEvents) => {
@@ -97,6 +94,10 @@ class App extends Component {
 		return data;
 	};
 
+	componentWillUnmount() {
+		this.mounted = false;
+	}
+
 	render() {
 		if (this.state.showWelcomeScreen === undefined)
 			return <div className='app' />;
@@ -119,34 +120,36 @@ class App extends Component {
 					numberOfEvents={this.state.numberOfEvents}
 					countEvent={this.countEvent}
 				/>
-				<ScatterChart
-					width={730}
-					height={250}
-					margin={{
-						top: 20,
-						right: 20,
-						bottom: 10,
-						left: 10,
-					}}>
-					<CartesianGrid strokeDasharray='3 3' />
-					<XAxis dataKey='city' type='category' name='city' />
-					<YAxis
-						dataKey='number'
-						type='number'
-						name='number of events'
-					/>
+				<ResponsiveContainer height={400}>
+					<ScatterChart
+						width={1200}
+						height={250}
+						margin={{
+							top: 20,
+							right: 20,
+							bottom: 10,
+							left: 10,
+						}}>
+						<CartesianGrid strokeDasharray='3 3' />
+						<XAxis dataKey='city' type='category' name='city' />
+						<YAxis
+							dataKey='number'
+							type='number'
+							name='number of events'
+						/>
 
-					<Tooltip cursor={{ strokeDasharray: '3 3' }} />
+						<Tooltip cursor={{ strokeDasharray: '3 3' }} />
 
-					<Scatter data={this.getData()} fill='#8884d8' />
-				</ScatterChart>
+						<Scatter data={this.getData()} fill='#8884d8' />
+					</ScatterChart>
+				</ResponsiveContainer>
 				<EventList events={this.state.events} />
-				{/* <WelcomeScreen
+				<WelcomeScreen
 					showWelcomeScreen={this.state.showWelcomeScreen}
 					getAccessToken={() => {
 						getAccessToken();
 					}}
-				/> */}
+				/>
 			</div>
 		);
 	}
