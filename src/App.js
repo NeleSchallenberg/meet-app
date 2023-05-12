@@ -129,27 +129,24 @@ class App extends Component {
 						left: 10,
 					}}>
 					<CartesianGrid strokeDasharray='3 3' />
-					<XAxis dataKey='x' type='number' name='stature' unit='cm' />
-					<YAxis dataKey='y' type='number' name='weight' unit='kg' />
-					<ZAxis
-						dataKey='z'
+					<XAxis dataKey='city' type='category' name='city' />
+					<YAxis
+						dataKey='number'
 						type='number'
-						range={[64, 144]}
-						name='score'
-						unit='km'
+						name='number of events'
 					/>
+
 					<Tooltip cursor={{ strokeDasharray: '3 3' }} />
-					<Legend />
-					<Scatter name='A school' data={data01} fill='#8884d8' />
-					<Scatter name='B school' data={data02} fill='#82ca9d' />
+
+					<Scatter data={this.getData()} fill='#8884d8' />
 				</ScatterChart>
 				<EventList events={this.state.events} />
-				<WelcomeScreen
+				{/* <WelcomeScreen
 					showWelcomeScreen={this.state.showWelcomeScreen}
 					getAccessToken={() => {
 						getAccessToken();
 					}}
-				/>
+				/> */}
 			</div>
 		);
 	}
