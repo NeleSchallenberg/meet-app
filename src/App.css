@@ -14,10 +14,6 @@ body {
 	box-sizing: border-box;
 }
 
-.data-vis-wrapper {
-	margin: 20px 70px 20px 30px;
-}
-
 .offline-alert {
 	padding: 20px;
 	background-color: white;
@@ -194,17 +190,13 @@ input[type='number'] {
 	font-family: sans-serif;
 }
 
+/* ---------- CHARTS ---------- */
+
 .data-vis-wrapper {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
-	flex-direction: column;
-}
-.data-vis-wrapper .recharts-responsive-container {
-	min-width: 100%;
-	display: flex;
-}
-.recharts-surface {
-	overflow: visible;
+	margin: 60px;
 }
 
 /* ---------- WELCOME SCREEN ---------- */

@@ -123,9 +123,13 @@ class App extends Component {
 					countEvent={this.countEvent}
 				/>
 				<div className='data-vis-wrapper'>
-					<EventGenre events={this.state.events} />
+					<EventGenre
+						className='pie-chart'
+						events={this.state.events}
+					/>
 					<ResponsiveContainer height={400}>
 						<ScatterChart
+							className='scatter-chart'
 							margin={{
 								top: 20,
 								right: 20,
@@ -142,7 +146,10 @@ class App extends Component {
 
 							<Tooltip cursor={{ strokeDasharray: '3 3' }} />
 
-							<Scatter data={this.getData()} fill='#8884d8' />
+							<Scatter
+								data={this.getData()}
+								fill='palevioletred'
+							/>
 						</ScatterChart>
 					</ResponsiveContainer>
 				</div>
